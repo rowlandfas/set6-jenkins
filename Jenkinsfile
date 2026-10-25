@@ -36,7 +36,7 @@ pipeline {
  
                     test -f app/index.html
                     test -f app/Dockerfile
-                    grep -q "Welcome to My First CI/CD Pipeline" app/index.html
+                    grep -q "Welcome to Set33 CI/CD Pipeline" app/index.html
  
                     echo "All application checks passed."
                 '''
@@ -80,7 +80,7 @@ pipeline {
                     for i in $(seq 1 15); do
                         if docker exec ${CONTAINER_NAME} \
                             wget -q -O - http://127.0.0.1/ \
-                            | grep -q "Welcome to My First CI/CD Pipeline"; then
+                            | grep -q "Welcome to Set33 CI/CD Pipeline"; then
                             echo "Deployment successful."
                             exit 0
                         fi
