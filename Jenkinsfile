@@ -36,7 +36,7 @@ pipeline {
  
                     test -f app/index.html
                     test -f app/Dockerfile
-                    grep -q "Welcome to Set33 CI/CD Pipeline" app/index.html
+                    grep -q "Welcome to My First CI/CD Pipeline" app/index.html
  
                     echo "All application checks passed."
                 '''
